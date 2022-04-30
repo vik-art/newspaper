@@ -10,7 +10,7 @@
     </div>
     <div class="container-articles">
         <mat-card *ngFor="let article of articles" class="container-articles-item">
-            <img mat-card-image src={{article.imageUrl}} alt="Photo of a Shiba Inu">
+            <img mat-card-image src={{article.imageUrl}} alt={{article.title}}>
             <div class="container-articles-item-text">
                 <mat-card-subtitle><mat-icon>calendar_today</mat-icon>{{article.publishedAt | date}}</mat-card-subtitle>
                 <mat-card-title>{{article.title}}</mat-card-title>           
