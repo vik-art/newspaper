@@ -8,7 +8,7 @@ const routes: Routes = [
     path: "", component: NewspaperListComponent
   },
   {
-    path: "newspaper/:id", component: NewspaperPageComponent
+    path: "article/:id", component: NewspaperPageComponent
   }
 ];
 

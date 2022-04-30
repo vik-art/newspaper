@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Article } from 'src/app/common/article.interface';
 import { NewspaperService } from 'src/app/services/newspaper.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { NewspaperService } from 'src/app/services/newspaper.service';
   styleUrls: ['./newspaper-list.component.scss']
 })
 export class NewspaperListComponent implements OnInit {
-  articles!: Array<any>;
+  articles!: Array<Article>;
 
   constructor(
     private newspaperService: NewspaperService
