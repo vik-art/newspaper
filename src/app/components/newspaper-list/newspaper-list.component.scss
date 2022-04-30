@@ -51,10 +51,12 @@
             flex-basis: 30%;
             height: 530px;
             margin-bottom: 45px;
+            letter-spacing: 1px;
             img {
                 margin-bottom: 0;
                 display: block;
                 height: 217px;
+                object-fit: cover;
             }
             mat-card-subtitle {
                 color: $secondary-font-color;
@@ -83,6 +85,15 @@
             .article-summary {
                 font-size: 16px;
                 line-height: 1.5;
+            }
+            .article-link {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                font-weight: 700;
+                mat-icon {
+                    margin-left: 6px;
+                }
             }
         }
     }
