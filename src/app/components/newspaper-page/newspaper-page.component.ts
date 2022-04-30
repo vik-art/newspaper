@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { switchMap } from 'rxjs';
+import { Article } from 'src/app/common/article.interface';
+import { NewspaperService } from 'src/app/services/newspaper.service';
 
 @Component({
   selector: 'app-newspaper-page',
@@ -6,10 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./newspaper-page.component.scss']
 })
 export class NewspaperPageComponent implements OnInit {
+  article!: Article;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private newspaperService: NewspaperService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.route.params
+    .pipe(
+      switchMap((params: Params) => {
+        return this.newspaperService.getById(params["id"])
+      })
+    ).subscribe(res => {
+      console.log(res)
+      this.article = res;
+    })
   }
+
 
 }
