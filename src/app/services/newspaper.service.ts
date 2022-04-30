@@ -14,7 +14,7 @@ export class NewspaperService {
 
   getArticles(): Observable<any> {
     const params = new HttpParams()
-    .set("_limit", 20)
+    .set("_limit", 15)
     return this.http.get(environment.articlesUrl, {params: params})
   }
 }
