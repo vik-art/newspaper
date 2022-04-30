@@ -1,4 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/main.scss";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    font-family: $main-font;
+    margin: 0;
+    padding: 0
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, p, ul {
+    margin: 0;
+    padding: 0;
+}
+input {
+    border: none;
+    outline: none;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
