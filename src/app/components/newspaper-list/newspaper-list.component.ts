@@ -19,7 +19,8 @@ export class NewspaperListComponent implements OnInit {
 
   initArticles() {
     this.newspaperService.getArticles().subscribe(res => {
-      console.log(res)
+      console.log(res);
+      this.articles = res;
     })
   }
 

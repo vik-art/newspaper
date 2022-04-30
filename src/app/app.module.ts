@@ -9,9 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewspaperListComponent } from './components/newspaper-list/newspaper-list.component';
 import { NewspaperPageComponent } from './components/newspaper-page/newspaper-page.component';
 
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -27,9 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
